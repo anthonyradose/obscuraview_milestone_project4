@@ -7,6 +7,7 @@ body {
     center fixed;
   background-size: cover;
   height: calc(100vh - 164px);
+  font-family: "Roboto", sans-serif;
 }
 
 /* from Bulma */
@@ -16,6 +17,9 @@ body {
   justify-content: center;
   height: 1.5rem;
   width: 1.5rem;
+}
+.bi{
+  font-size: 1.5em;
 }
 
 .home-logo {
@@ -53,6 +57,10 @@ body {
 
 .border-black {
   border: 1px solid black !important;
+}
+
+.bg-black {
+  background: #000 !important;
 }
 
 /* -------------------------------- Media Queries */
