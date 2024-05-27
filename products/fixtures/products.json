@@ -1,0 +1,48 @@
+[
+    {
+        "pk": 1,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100001",
+            "name": "Bird",
+            "description": "A breathtaking photograph capturing the beauty of a bird in its natural habitat.",
+            "photographer": "Jane Smith",
+            "price": 49.99,
+            "category": 2,
+            "rating": 4.8,
+            "image_url": "https://cdn.pixabay.com/photo/2024/05/15/08/23/bird-8763079_1280.jpg",
+            "image": "bird-8763079_640.jpg"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100002",
+            "name": "Blue Buick",
+            "description": "Perfect picture of a classic car.",
+            "photographer": "John Smith",
+            "price": 79.99,
+            "category": 1,
+            "rating": 4.5,
+            "image_url": "https://cdn.pixabay.com/photo/2016/05/18/10/52/buick-1400243_640.jpg",
+            "image": "buick-1400243_640.jpg"
+        }
+    },
+
+    {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100003",
+            "name": "Ao dai",
+            "description": "Woman dressed in an Ao dai.",
+            "photographer": "Jane Smith",
+            "price": 89.99,
+            "category": 3,
+            "rating": 5,
+            "image_url": "https://cdn.pixabay.com/photo/2021/04/05/04/21/ao-dai-6152101_1280.jpg",
+            "image": "ao-dai-6152101_640.jpg"
+        }
+    }
+]
