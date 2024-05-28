@@ -1,6 +1,19 @@
 [
-    {"pk": 1, "model": "products.category", "fields": {"name": "standard_prints", "friendly_name": "Standard Prints"}},
-    {"pk": 2, "model": "products.category", "fields": {"name": "canvas_prints", "friendly_name": "Canvas Prints"}},
-    {"pk": 3, "model": "products.category", "fields": {"name": "framed_prints", "friendly_name": "Framed Prints"}},
-    {"pk": 4, "model": "products.category", "fields": {"name": "special_offers", "friendly_name": "Special Offers"}}
+    {"pk": 1, "model": "products.category", "fields": {"name": "nature", "friendly_name": "Nature"}},
+    {"pk": 2, "model": "products.category", "fields": {"name": "sport", "friendly_name": "Sport"}},
+    {"pk": 3, "model": "products.category", "fields": {"name": "cars", "friendly_name": "Cars"}},
+    {"pk": 4, "model": "products.category", "fields": {"name": "people", "friendly_name": "People"}},
+    {"pk": 5, "model": "products.category", "fields": {"name": "street_photography", "friendly_name": "Street Photography"}},
+    {"pk": 6, "model": "products.category", "fields": {"name": "abstract", "friendly_name": "Abstract"}},
+    {"pk": 7, "model": "products.category", "fields": {"name": "architecture", "friendly_name": "Architecture"}},
+    {"pk": 8, "model": "products.category", "fields": {"name": "travel", "friendly_name": "Travel"}},
+    {"pk": 9, "model": "products.category", "fields": {"name": "food_and_drink", "friendly_name": "Food & Drink"}},
+    {"pk": 10, "model": "products.category", "fields": {"name": "black_and_white", "friendly_name": "Black & White"}},
+    {"pk": 11, "model": "products.category", "fields": {"name": "seasonal", "friendly_name": "Seasonal"}},
+    {"pk": 12, "model": "products.category", "fields": {"name": "cultural", "friendly_name": "Cultural"}},
+    {"pk": 13, "model": "products.category", "fields": {"name": "fashion_and_beauty", "friendly_name": "Fashion & Beauty"}},
+    {"pk": 14, "model": "products.category", "fields": {"name": "space", "friendly_name": "Space"}},
+    {"pk": 15, "model": "products.category", "fields": {"name": "science_and_tech", "friendly_name": "Science & Tech"}},
+    {"pk": 16, "model": "products.category", "fields": {"name": "music", "friendly_name": "Music"}},
+    {"pk": 17, "model": "products.category", "fields": {"name": "vintage", "friendly_name": "Vintage"}}
 ]
