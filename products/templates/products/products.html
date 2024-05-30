@@ -95,9 +95,10 @@
                                             {% if product.category %}
                                             <p class="small mt-1 mb-0">
                                                 <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                                    <i class="bi bi-tag me-1"></i>{{ product.category.friendly_name }}
                                                 </a>
                                             </p>
+                                            {% endif %}
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="bi bi-star me-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
@@ -128,9 +129,50 @@
                                 <hr>
                             </div>
                         {% endif %}
-                    {% endfor %}
+                        {% endfor %}
                 </div>
             </div>
         </div>
     </div>
+    <div class="btt-button shadow-sm rounded-0 border border-black">
+        <a class="btt-link d-flex h-100">
+            <i class="bi bi-arrow-up text-black mx-auto my-auto"></i>
+        </a>	
+    </div>
 {% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+		document.querySelectorAll('.btt-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        window.scrollTo(0, 0);
+    });
+});
+
+	</script>
+    
+    <script type="text/javascript">
+        document.getElementById('sort-selector').addEventListener('change', function() {
+    const selector = this;
+    const currentUrl = new URL(window.location);
+
+    const selectedVal = selector.value;
+    if (selectedVal !== "reset") {
+        const [sort, direction] = selectedVal.split("_");
+
+        currentUrl.searchParams.set("sort", sort);
+        currentUrl.searchParams.set("direction", direction);
+
+        window.location.replace(currentUrl);
+    } else {
+        currentUrl.searchParams.delete("sort");
+        currentUrl.searchParams.delete("direction");
+
+        window.location.replace(currentUrl);
+    }
+});
+
+    </script>
+{% endblock %}
+
