@@ -36,6 +36,7 @@
                             </thead>
 
                             {% for item in basket_items %}
+                            {{item}}
                                 <tr>
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
@@ -43,13 +44,11 @@
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
                                         <p class="my-0">{{ item.product.photographer }}</p>
+                                        <p class="my-0"><strong>Size: </strong>{% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                                         <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.product.price }}</p>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0"><strong>Size: </strong>{{ item.frame_size|upper }}</p>
                                     </td>
                                     <td class="py-3 w-25">
                                         <p class="my-0">{{ item.quantity }}</p>

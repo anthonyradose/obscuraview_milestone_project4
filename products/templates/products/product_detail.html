@@ -49,19 +49,20 @@
                         {% csrf_token %}
 
                         <div class="form-row">
-                            {% with product.frame_size as size %}
-<div class="col-12">
-    <p><strong>Size:</strong></p>
-    <select class="form-control rounded-0 w-50" name="product_size" id="id_product_size">
-        <option value="s"{% if size == 's' %} selected{% endif %}>S</option>
-        <option value="m" selected>M</option>
-        <option value="l"{% if size == 'l' %} selected{% endif %}>L</option>
-        <option value="xl"{% if size == 'xl' %} selected{% endif %}>XL</option>
-    </select>
-</div>
+                            {% with product.has_sizes as s %}
+                            {% if s %}
+                                <div class="col-12">
+                                    <p><strong>Size:</strong></p>
+                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                        <option value="s">S</option>
+                                        <option value="m" selected>M</option>
+                                        <option value="l">L</option>
+                                        <option value="xl">XL</option>
+                                    </select>
+                                </div>
+                            {% endif %}
 
-{% endwith %}
-                          
+                            {% endwith %}
 
                         
                             <div class="col-12">
