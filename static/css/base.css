@@ -22,7 +22,7 @@ body {
   height: 1.5rem;
   width: 1.5rem;
 }
-.bi{
+.bi {
   font-size: 1.5em;
 }
 
@@ -81,13 +81,13 @@ body {
 }
 
 .overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: white;
+  z-index: -1;
   opacity: 0.5;
 }
 
@@ -104,10 +104,11 @@ a.category-badge > span.badge:hover {
   right: 10px;
 }
 
-.btt-link, .update-link, .remove-item {
+.btt-link,
+.update-link,
+.remove-item {
   cursor: pointer;
 }
-
 
 /* ------------------------------- bootstrap toasts */
 
@@ -124,6 +125,67 @@ a.category-badge > span.badge:hover {
   height: 2px;
 }
 
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+  width: 0;
+
+  height: 0;
+
+  border-left: 4px solid transparent;
+
+  border-right: 4px solid transparent;
+
+  border-bottom: 10px solid black;
+
+  position: absolute;
+
+  top: -10px;
+
+  right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+
+.arrow-primary {
+  border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+  border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+  border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+  border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+  border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+  border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+  border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+  border-bottom-color: #343a40 !important;
+}
+
+.basket-notification-wrapper {
+  height: 100px;
+
+  overflow-x: hidden;
+
+  overflow-y: auto;
+}
 
 /* -------------------------------- Media Queries */
 
@@ -137,26 +199,25 @@ a.category-badge > span.badge:hover {
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
   .fixed-top-desktop-only {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1030;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
   }
 
   .header-container {
-      padding-top: 164px;
+    padding-top: 164px;
   }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
   .header-container {
-      padding-top: 116px;
+    padding-top: 116px;
   }
 
   body {
-      height: calc(100vh - 116px);
+    height: calc(100vh - 116px);
   }
 }
-
