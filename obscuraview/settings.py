@@ -45,7 +45,10 @@ INSTALLED_APPS = [
     'home',
     'products',
     'basket',
-    'checkout'
+    'checkout',
+    
+    # Other
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -61,6 +64,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'obscuraview.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -75,8 +80,17 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
                 'basket.contexts.basket_contents'
             ],
+            
+            'builtins': [
+
+                'crispy_forms.templatetags.crispy_forms_tags',
+
+                'crispy_forms.templatetags.crispy_forms_field',
+
+            ]
         },
     },
 ]
@@ -149,13 +163,15 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_URL = '/media/'
