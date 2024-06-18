@@ -1,11 +1,15 @@
 const stripePublicKey = document
   .getElementById("id_stripe_public_key")
   .textContent.slice(1, -1);
+console.log(stripePublicKey);
 const clientSecret = document
   .getElementById("id_client_secret")
   .textContent.slice(1, -1);
+console.log(clientSecret);
 const stripe = Stripe(stripePublicKey);
+console.log(stripe);
 const elements = stripe.elements();
+
 const style = {
   base: {
     color: "#000",
@@ -22,6 +26,7 @@ const style = {
   },
 };
 const card = elements.create("card", { style: style });
+console.log(card);
 card.mount("#card-element");
 
 // Handle realtime validation errors on the card element
@@ -42,31 +47,38 @@ card.addEventListener("change", function (event) {
 
 // Handle form submit
 const form = document.getElementById("payment-form");
-
+console.log(form);
 form.addEventListener("submit", function (ev) {
   ev.preventDefault();
+
   card.update({ disabled: true });
+
   document.getElementById("submit-button").setAttribute("disabled", true);
+
   document.getElementById("payment-form").style.display = "none";
+
   document.getElementById("loading-overlay").style.display = "block";
 
   const saveInfo = document.getElementById("id-save-info").checked;
+  console.log(saveInfo);
   // From using {% csrf_token %} in the form
   const csrfToken = document.querySelector(
     'input[name="csrfmiddlewaretoken"]'
   ).value;
+  console.log(csrfToken);
   const postData = {
     csrfmiddlewaretoken: csrfToken,
     client_secret: clientSecret,
     save_info: saveInfo,
   };
-
+  console.log(postData);
   const url = "/checkout/cache_checkout_data/";
-
+  console.log(url);
   fetch(url, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      "X-CSRFToken": csrfToken,
     },
     body: JSON.stringify(postData),
   })
