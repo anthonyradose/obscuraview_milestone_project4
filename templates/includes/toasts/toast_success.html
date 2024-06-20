@@ -21,12 +21,13 @@
     <div class="row">
       <div class="col">
         {{ message }}
-
+        
         <hr class="mt-1 mb-3" />
       </div>
     </div>
+  
 
-    {% if grand_total and not on_profile_page %}
+    {% if grand_total and not on_profile_page and not item_added_to_wishlist %}
 
     <p class="logo-font bg-white text-black py-1">
       Your Basket ({{ product_count }})

@@ -72,6 +72,73 @@
                     </table>
                 </div>
             </div>
+            <div class="col-12 col-lg-6">
+
+                <p class="text-muted">Wishlist</p>
+
+                <div class="wishlist table-responsive">
+
+                    <table class="table table-sm table-bordered">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Product</th>
+
+                                <th>Actions</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            {% for item in wishlist_items %}
+
+                                <tr>
+
+                                    <td>
+
+                                        <a href="{% url 'product_detail' item.product.id %}">
+
+                                            {{ item.product.name }}
+
+                                        </a>
+
+                                    </td>
+
+                                    <td>
+
+                                        <form method="post" action="{% url 'remove_from_wishlist' item.id %}">
+
+                                            {% csrf_token %}
+
+                                            <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                        </form>
+
+                                    </td>
+
+                                </tr>
+
+                            {% empty %}
+
+                                <tr>
+
+                                    <td colspan="2">Your wishlist is empty.</td>
+
+                                </tr>
+
+                            {% endfor %}
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
         </div>
 {% endblock %}
 

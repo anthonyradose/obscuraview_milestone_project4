@@ -127,6 +127,12 @@
                         </div>
 
                     </form>
+                    <form method="post" action="{% url 'add_to_wishlist' product.id %}">
+                        {% csrf_token %}
+                        <button type="submit">Add to Wishlist</button>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                        
+                    </form>
                 </div>
             </div>
         </div>
