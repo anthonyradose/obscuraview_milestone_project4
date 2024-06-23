@@ -20,7 +20,7 @@ def add_review(request, product_id):
             review.user = request.user
             review.save()
             messages.success(request, f'Your review for {product.name} has been submitted')
-            return redirect('product_detail', product_id=product.id)
+            return redirect(f'/products/{product_id}/?review_added=True')
     context = {
         'form': form,
         'product': product,

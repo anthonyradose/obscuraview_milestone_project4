@@ -16,9 +16,7 @@ def profile(request):
     wishlist_items = Wishlist.objects.filter(user=request.user)
     user_reviews = Review.objects.filter(user=request.user)
     review_forms = [ReviewForm(instance=review) for review in user_reviews]
-    
 
-    
     if request.method == 'POST':
         form = UserProfileForm(request.POST, instance=profile)
         if form.is_valid():
@@ -28,7 +26,7 @@ def profile(request):
             messages.error(request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
-        
+
     orders = profile.orders.all()
     template = 'profiles/profile.html'
     context = {
