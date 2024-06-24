@@ -3,10 +3,10 @@ from django.db.models import Avg
 
 
 class Category(models.Model):
-    
+  
     class Meta:
         verbose_name_plural = 'Categories'
-        
+  
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -18,13 +18,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    FRAME_SIZES = [
-        ('s', 'Small'),
-        ('m', 'Medium'),
-        ('l', 'Large'),
-        ('xl', 'Extra Large'),
-    ]
-    
+
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
@@ -34,11 +28,10 @@ class Product(models.Model):
     photographer = models.CharField(max_length=254)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    # frame_size = models.CharField(max_length=2, choices=FRAME_SIZES, default='m')
-    has_sizes = models.BooleanField(default=False, null=True, blank=True)
+    has_sizes = models.BooleanField(default=True, null=True, blank=True)
 
     def __str__(self):
         return self.name
-    
+
     def average_rating(self):
         return self.reviews.aggregate(Avg('rating'))['rating__avg'] or 0
