@@ -1,11 +1,11 @@
 <script type="text/javascript">
     // Disable +/- buttons outside 1-99 range
     function handleEnableDisable(itemId) {
-        const currentValue = parseInt(document.querySelector(`#id_qty_${itemId}`).value);
+        const currentValue = parseInt(document.querySelector(`.id_qty_${itemId}`).value);
         const minusDisabled = currentValue < 2;
         const plusDisabled = currentValue > 98;
-        document.querySelector(`#decrement-qty_${itemId}`).disabled = minusDisabled;
-        document.querySelector(`#increment-qty_${itemId}`).disabled = plusDisabled;
+        document.querySelector(`.decrement-qty_${itemId}`).disabled = minusDisabled;
+        document.querySelector(`.increment-qty_${itemId}`).disabled = plusDisabled;
     }
 
     // Ensure proper enabling/disabling of all inputs on page load
@@ -43,9 +43,11 @@
             e.preventDefault();
             const closestInput = this.closest('.input-group').querySelector('.qty_input');
             const currentValue = parseInt(closestInput.value);
+            if (currentValue > 1) {
             closestInput.value = currentValue - 1;
             const itemId = this.dataset.item_id;
             handleEnableDisable(itemId);
+            }
         });
     });
 </script>
