@@ -4,13 +4,13 @@
         "model": "products.product",
         "fields": {
             "sku": "pp100001",
-            "name": "Bird",
-            "description": "A breathtaking photograph capturing the beauty of a bird in its natural habitat.",
-            "photographer": "Jane Smith",
+            "name": "Sunbird",
+            "description": "A breathtaking photograph capturing the natural beauty of a Sunbird.",
+            "photographer": "Pawel Marshall",
             "price": 49.99,
             "category": 1,
-            "image_url": "https://cdn.pixabay.com/photo/2024/05/15/08/23/bird-8763079_1280.jpg",
-            "image": "bird-8763079_640.jpg"
+            "image_url": "",
+            "image": "bird.png"
         }
     },
     {
@@ -20,11 +20,11 @@
             "sku": "pp100002",
             "name": "Blue Buick",
             "description": "Perfect picture of a classic car.",
-            "photographer": "John Smith",
+            "photographer": "Ashley Bruce",
             "price": 79.99,
             "category": 3,
-            "image_url": "https://cdn.pixabay.com/photo/2016/05/18/10/52/buick-1400243_640.jpg",
-            "image": "buick-1400243_640.jpg"
+            "image_url": "",
+            "image": "buick.png"
         }
     },
 
@@ -35,11 +35,191 @@
             "sku": "pp100003",
             "name": "Ao dai",
             "description": "Woman dressed in an Ao dai.",
-            "photographer": "Jane Smith",
+            "photographer": "Will Lovell",
             "price": 89.99,
             "category": 12,
-            "image_url": "https://cdn.pixabay.com/photo/2021/04/05/04/21/ao-dai-6152101_1280.jpg",
-            "image": "ao-dai-6152101_640.jpg"
+            "image_url": "",
+            "image": "ao-dai.png"
+        }
+    },
+
+    {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100004",
+            "name": "Tiger",
+            "description": "Stunning capture of a tiger emerging from dense jungle.",
+            "photographer": "Sylvia Preece",
+            "price": 49.99,
+            "category": 1,
+            "image_url": "",
+            "image": "tiger.png"
+        }
+    },
+
+    {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100005",
+            "name": "Colour",
+            "description": "Mesmerising abstract painting featuring flowing colours and dynamic movement",
+            "photographer": "Rhiannon Graves",
+            "price": 99.99,
+            "category": 6,
+            "image_url": "",
+            "image": "colour.png"
+        }
+    },
+
+    {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100006",
+            "name": "Cyberpunk",
+            "description": "Urban night-scape bathed in neon lights",
+            "photographer": "Danny Chandler",
+            "price": 49.99,
+            "category": 5,
+            "image_url": "",
+            "image": "cyberpunk.png"
+        }
+    },
+
+    {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100007",
+            "name": "Beach",
+            "description": "Elegant black and white print of fishermen working on a beach",
+            "photographer": "Kamal Stubbs",
+            "price": 79.99,
+            "category": 10,
+            "image_url": "",
+            "image": "beach.png"
+        }
+    },
+
+    {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100008",
+            "name": "Light",
+            "description": "Architectural marvel showcasing the beauty of medieval gothic design.",
+            "photographer": "Jean Swift",
+            "price": 49.99,
+            "category": 7,
+            "image_url": "",
+            "image": "light.png"
+        }
+    },
+
+    {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp100009",
+            "name": "Motion Blur",
+            "description": "Vivid capture of a cyclist moving swiftly during a street race",
+            "photographer": "Sally Rai",
+            "price": 79.99,
+            "category": 2,
+            "image_url": "",
+            "image": "motion-blur.png"
+        }
+    },
+
+    {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000010",
+            "name": "Circuit Board",
+            "description": "Close-up view of a circuit board, showcasing its intricate circuitry.",
+            "photographer": "David Thompson",
+            "price": 39.99,
+            "category": 15,
+            "image_url": "",
+            "image": "printed-circuit-board.png"
+        }
+    },
+
+    {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000011",
+            "name": "Street",
+            "description": "Atmospheric night photo of a city street in the rain, capturing reflections and silhouettes.",
+            "photographer": "Danny Chandler",
+            "price": 79.99,
+            "category": 5,
+            "image_url": "",
+            "image": "street.png"
+        }
+    },
+
+    {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000012",
+            "name": "Portrait",
+            "description": "Heartfelt image of an elderly man with a cigar, evoking nostalgia",
+            "photographer": "Aimee Mansfield",
+            "price": 49.99,
+            "category": 4,
+            "image_url": "",
+            "image": "portrait.png"
+        }
+    },
+
+    {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000013",
+            "name": "Lone Football",
+            "description": "A lone football on the field of an empty stadium, capturing the tension and anticipation before a game.",
+            "photographer": "Thomas Morton",
+            "price": 29.99,
+            "category": 2,
+            "image_url": "",
+            "image": "football.png"
+        }
+    },
+
+    {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000014",
+            "name": "Proud Daisy",
+            "description": "A solitary daisy stands tall in all its beauty",
+            "photographer": "Aimee Mansfield",
+            "price": 69.99,
+            "category": 1,
+            "image_url": "",
+            "image": "daisy.png"
+        }
+    },
+
+    {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+            "sku": "pp1000015",
+            "name": "Beach Runner",
+            "description": "Captivating image of a runner on an empty beach with the vast ocean in the background",
+            "photographer": "Carly Read",
+            "price": 99.99,
+            "category": 10,
+            "image_url": "",
+            "image": "race.png"
         }
     }
 ]

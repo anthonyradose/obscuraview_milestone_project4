@@ -13,7 +13,7 @@
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
                 <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                <a href="{% url 'products' %}" class="dropdown-item">Shop</a>
             </div>
         </li>
 
@@ -22,10 +22,11 @@
                 Standard Prints
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="standard-prints-link">
-                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
-                <a href="{% url 'products' %}?category=cars" class="dropdown-item">Cars</a>
+                <a href="{% url 'products' %}?category=architecture" class="dropdown-item">Architecture</a>
                 <a href="{% url 'products' %}?category=cultural" class="dropdown-item">Cultural</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Standard Prints</a>
+                <a href="{% url 'products' %}?category=science_and_tech" class="dropdown-item">Science & Tech</a>
+                <a href="{% url 'products' %}?category=sport" class="dropdown-item">Sport</a>
+                <a href="{% url 'products' %}?category=architecture,cultural,science_and_tech,sport" class="dropdown-item">All Standard Prints</a>
             </div>
         </li>
 
@@ -34,10 +35,9 @@
                 Canvas Prints
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="canvas-prints-link">
+                <a href="{% url 'products' %}?category=abstract" class="dropdown-item">Abstract</a>
                 <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
-                <a href="{% url 'products' %}?category=cars" class="dropdown-item">Cars</a>
-                <a href="{% url 'products' %}?category=cultural" class="dropdown-item">Cultural</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Canvas Prints</a>
+                <a href="{% url 'products' %}?category=abstract,nature" class="dropdown-item">All Canvas Prints</a>
             </div>
         </li>
 
@@ -46,22 +46,11 @@
                 Framed Prints
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="framed-prints-link">
-                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
+                <a href="{% url 'products' %}?category=black_and_white" class="dropdown-item">Black & White</a>
                 <a href="{% url 'products' %}?category=cars" class="dropdown-item">Cars</a>
-                <a href="{% url 'products' %}?category=cultural" class="dropdown-item">Cultural</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Framed Prints</a>
-            </div>
-        </li>
-
-        <li class="nav-item dropdown">
-            <a class="fw-bold nav-link text-black" href="#" id="offers-link" data-bs-toggle="dropdown" aria-expanded="false">
-                Special Offers
-            </a>
-            <div class="dropdown-menu border-0" aria-labelledby="offers-link">
-                <a href="{% url 'products' %}?category=nature" class="dropdown-item">Nature</a>
-                <a href="{% url 'products' %}?category=cars" class="dropdown-item">Cars</a>
-                <a href="{% url 'products' %}?category=cultural" class="dropdown-item">Cultural</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=people" class="dropdown-item">People</a>
+                <a href="{% url 'products' %}?category=street_photography" class="dropdown-item">Street Photography</a>
+                <a href="{% url 'products' %}?category=black_and_white,cars,people,street_photography" class="dropdown-item">All Framed Prints</a>
             </div>
         </li>
     </ul>
