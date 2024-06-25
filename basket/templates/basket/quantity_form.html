@@ -8,7 +8,7 @@
     <div class="input-group input-group-{{ item.item_id }}">
       <div class="input-group-prepend">
         <button
-          class="decrement-qty btn btn-sm btn-black rounded-0 decrement-qty_{{ item.item_id }}"
+          class="decrement-qty btn btn-sm btn-dark rounded-0 decrement-qty_{{ item.item_id }}"
           data-item_id="{{ item.item_id }}"
         >
           <span> <i class="bi bi-dash bi-sm"></i> </span>
@@ -25,7 +25,7 @@
       />
       <div class="input-group-append">
         <button
-          class="increment-qty btn btn-sm btn-black rounded-0 increment-qty_{{ item.item_id }}"
+          class="increment-qty btn btn-sm btn-dark rounded-0 increment-qty_{{ item.item_id }}"
           data-item_id="{{ item.item_id }}"
         >
           <span> <i class="bi bi-plus bi-sm"></i> </span>
@@ -35,7 +35,7 @@
     </div>
   </div>
 </form>
-<a class="update-link text-info"><small>Update</small></a>
+<a class="update-link text-info text-decoration-none"><small>Update</small></a>
 <a
   class="remove-item text-danger float-right"
   id="remove_{{ item.item_id }}"

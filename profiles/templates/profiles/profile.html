@@ -15,21 +15,21 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
+    <div class="container-fluid mx-0 px-0">
+        <div class="container m-auto row">
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">My Profile</h2>
                 <hr>
             </div>
         </div>
-        <div class="row">
+        <div class="container m-auto row">
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Default Delivery Information</p>
                 <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-black rounded-0 text-uppercase float-right">Update Information</button>
+                    <button class="btn btn-dark rounded-0 text-uppercase float-right">Update Information</button>
                 </form>
             </div>
             <div class="col-12 col-lg-6">
@@ -48,7 +48,7 @@
                             {% for order in orders %}
                                 <tr>
                                     <td>
-                                        <a href="{% url 'order_history' order.order_number %}"
+                                        <a class="text-decoration-none" href="{% url 'order_history' order.order_number %}"
                                         title="{{ order.order_number }}">
                                             {{ order.order_number|truncatechars:6 }}
                                         </a>
@@ -98,7 +98,7 @@
 
                                     <td>
 
-                                        <a href="{% url 'product_detail' item.product.id %}">
+                                        <a class="text-decoration-none" href="{% url 'product_detail' item.product.id %}">
 
                                             {{ item.product.name }}
 
@@ -112,7 +112,7 @@
 
                                             {% csrf_token %}
 
-                                            <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                                            <button type="submit" class="btn btn-sm btn-danger rounded-0">Remove</button>
                                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                         </form>
 
@@ -152,7 +152,7 @@
                             {% for review in user_reviews %}
                                 <tr>
                                     <td>
-                                        <a href="{% url 'product_detail' review.product.id %}">
+                                        <a class="text-decoration-none" href="{% url 'product_detail' review.product.id %}">
                                             {{ review.product.name }}
                                         </a>
                                     </td>
@@ -160,7 +160,7 @@
             
                                 </tr>
                                     <td>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editReviewModal{{ review.id }}">
+                                        <button type="button" class="btn btn-primary rounded-0" data-bs-toggle="modal" data-bs-target="#editReviewModal{{ review.id }}">
                                             Edit Review
                                         </button>
                                         
@@ -170,7 +170,7 @@
                                                 <div class="modal-content">
                                                     <div class="modal-header">
                                                         <h5 class="modal-title" id="editReviewModalLabel">Edit Review</h5>
-                                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
                                                     </div>
                                                     {% for review_form in review_forms %}
                                                     {% if review_form.instance.id == review.id %}
@@ -181,8 +181,8 @@
                                                             {{ review_form|crispy }}
                                                         </div>
                                                         <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-                                                            <button type="submit" class="btn btn-primary">Save changes</button>
+                                                            <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="submit" class="btn btn-primary rounded-0">Save changes</button>
                                                         </div>
                                                     </form>
                                                     {% endif %}
@@ -195,7 +195,7 @@
                                     </td>
                                     <td>
                                      <!-- Button trigger modal -->
-<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ review.id }}">
+<button type="button" class="btn btn-dark rounded-0" data-bs-toggle="modal" data-bs-target="#deleteReviewModal{{ review.id }}">
     Delete Review
   </button>
   
@@ -205,17 +205,17 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="deleteReviewModalLabel">Confirm Delete</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" class="btn-close rounded-0" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           Are you sure you want to delete this review?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-secondary rounded-0" data-bs-dismiss="modal">Cancel</button>
           <form method="POST" action="{% url 'delete_review' review.id %}">
             {% csrf_token %}
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn btn-danger rounded-0">Delete</button>
           </form>
         </div>
       </div>

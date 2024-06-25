@@ -64,7 +64,7 @@
         "fields": {
             "sku": "pp100005",
             "name": "Colour",
-            "description": "Mesmerising abstract painting featuring flowing colours and dynamic movement",
+            "description": "Mesmerising abstract painting featuring flowing colours and dynamic movement.",
             "photographer": "Rhiannon Graves",
             "price": 99.99,
             "category": 6,
@@ -79,7 +79,7 @@
         "fields": {
             "sku": "pp100006",
             "name": "Cyberpunk",
-            "description": "Urban night-scape bathed in neon lights",
+            "description": "Urban night-scape bathed in neon lights.",
             "photographer": "Danny Chandler",
             "price": 49.99,
             "category": 5,
@@ -94,7 +94,7 @@
         "fields": {
             "sku": "pp100007",
             "name": "Beach",
-            "description": "Elegant black and white print of fishermen working on a beach",
+            "description": "Elegant black and white print of fishermen working on a beach.",
             "photographer": "Kamal Stubbs",
             "price": 79.99,
             "category": 10,
@@ -124,7 +124,7 @@
         "fields": {
             "sku": "pp100009",
             "name": "Motion Blur",
-            "description": "Vivid capture of a cyclist moving swiftly during a street race",
+            "description": "Vivid capture of a cyclist moving swiftly during a street race.",
             "photographer": "Sally Rai",
             "price": 79.99,
             "category": 2,
@@ -169,7 +169,7 @@
         "fields": {
             "sku": "pp1000012",
             "name": "Portrait",
-            "description": "Heartfelt image of an elderly man with a cigar, evoking nostalgia",
+            "description": "Heartfelt image of an elderly man with a cigar, evoking nostalgia.",
             "photographer": "Aimee Mansfield",
             "price": 49.99,
             "category": 4,
@@ -199,7 +199,7 @@
         "fields": {
             "sku": "pp1000014",
             "name": "Proud Daisy",
-            "description": "A solitary daisy stands tall in all its beauty",
+            "description": "A solitary daisy stands tall in all its beauty.",
             "photographer": "Aimee Mansfield",
             "price": 69.99,
             "category": 1,
@@ -214,7 +214,7 @@
         "fields": {
             "sku": "pp1000015",
             "name": "Beach Runner",
-            "description": "Captivating image of a runner on an empty beach with the vast ocean in the background",
+            "description": "Captivating image of a runner on an empty beach with the vast ocean in the background.",
             "photographer": "Carly Read",
             "price": 99.99,
             "category": 10,
