@@ -23,7 +23,7 @@ body {
   width: 1.5rem;
 }
 .bi {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .bi-house-fill:hover, .bi-person-fill:hover, .bi-cart-fill:hover{
   filter: brightness(70%);
@@ -194,6 +194,14 @@ input[name="q"]::placeholder {
 
 /* -------------------------------- Media Queries */
 
+@media (min-width: 576px){
+  .bi{
+    font-size: 2em;
+  }
+  .bi-chevron-left, .bi-lock, .bi-gift{
+    font-size: var(--bs-btn-font-size);
+  }
+}
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
   .container {
@@ -356,9 +364,6 @@ input[name="q"]::placeholder {
     padding: 0.15rem;
   }
 
-  .nav-link i {
-    font-size: 1rem;
-  }
 
   .navbar-toggler {
     padding: 0.6rem 0.6rem;

@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Checkout</h2>
+                <h2 class="logo-font my-5">Checkout</h2>
                 <hr>
             </div>
         </div>
@@ -109,13 +109,13 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2 ms-3">                    
-						<a href="{% url 'view_basket' %}" class="btn btn-dark ">
+						<a href="{% url 'view_basket' %}" class="btn btn-dark my-2">
 							<span class="icon">
 								<i class="bi bi-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Basket</span>
 						</a>
-						<button id="submit-button" class="btn btn-dark ">
+						<button id="submit-button" class="btn btn-dark my-2">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="bi bi-lock"></i>
@@ -134,11 +134,9 @@
     </div>
 
     <div id="loading-overlay">
-        <h1 class="text-light logo-font loading-spinner">
-            <span class="icon">
-                <div class="spinner-border" role="status">
+        <h1 class="text-light loading-spinner">
+                <div class="spinner-grow text-white" role="status">
                 </div>
-            </span>
         </h1>
     </div>
 {% endblock %}

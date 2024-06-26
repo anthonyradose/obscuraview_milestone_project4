@@ -19,7 +19,7 @@
         <div class="row">
             <div class="col">
                 <hr>
-                <h2 class="logo-font mb-4">Thank You</h2>
+                <h2 class="logo-font my-5">Thank You</h2>
                 <hr>
                 <p class="text-dark">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
@@ -197,14 +197,14 @@
                         <span class="icon me-2">
                             <i class="bi bi-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Back to Profile</span>
+                        <span>Back to Profile</span>
                     </a>
                 {% else %}
                     <a href="{% url 'products' %}" class="btn btn-dark  my-2">
                         <span class="icon me-2">
                             <i class="bi bi-gift"></i>
                         </span>
-                        <span class="text-uppercase">Explore more!</span>
+                        <span>Explore more!</span>
                     </a>
                 {% endif %}
 			</div>

@@ -79,7 +79,7 @@
         "fields": {
             "sku": "pp100006",
             "name": "Stop-off",
-            "description": "Dazzling image of a subway station at night, with vivid lighting and busy commuters",
+            "description": "Dazzling image of a subway station at night, with vivid lighting and busy commuters.",
             "photographer": "Danny Chandler",
             "price": 49.99,
             "category": 5,
@@ -169,7 +169,7 @@
         "fields": {
             "sku": "pp1000012",
             "name": "Sunrise Stroll",
-            "description": "Stunning capture of a peaceful morning stroll along a foggy path, with the sun rising in the background..",
+            "description": "Stunning capture of a peaceful morning stroll along a foggy path, with the sun rising in the background.",
             "photographer": "Aimee Mansfield",
             "price": 79.99,
             "category": 4,
