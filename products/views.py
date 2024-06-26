@@ -64,7 +64,10 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
-    existing_review = reviews.filter(user=request.user).exists()
+    if request.user.is_authenticated:
+        existing_review = reviews.filter(user=request.user).exists()
+    else:
+        existing_review = False
     existing_reviews = reviews.exists()
     form = ReviewForm()
     average_rating = product.average_rating()

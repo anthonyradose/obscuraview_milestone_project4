@@ -40,7 +40,7 @@
                     {% for item in basket_items %}
                         <div class="row">
                             <div class="col-12 col-sm-6 mb-2">
-                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                <img class="img-fluid" src="{{ item.product.image.url }}">
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
                                 {% include "basket/product_info.html" %}
@@ -55,13 +55,13 @@
                         </div>
                         <div class="row"><div class="col"><hr></div></div>
                     {% endfor %}
-                    <div class="btt-button shadow-sm rounded-0 border border-black">
+                    <div class="btt-button shadow-sm border border-black">
                         <a class="btt-link d-flex h-100">
                             <i class="bi bi-arrow-up text-dark mx-auto my-auto"></i>
                         </a>	
                     </div>
                 </div>
-                    <div class="table-responsive rounded-0 d-none d-md-block">
+                    <div class="table-responsive  d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead>
                                 <tr>
@@ -76,7 +76,7 @@
                             {% for item in basket_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid " src="{{ item.product.image.url }}">
                                     </td>
                                     <td class="py-3">
                                         {% include "basket/product_info.html" %}
@@ -106,7 +106,7 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn rounded-0 btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-dark btn-lg">
                         <span class="icon">
                             <i class="bi bi-chevron-left"></i>
                         </span>

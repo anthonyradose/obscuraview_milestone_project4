@@ -71,12 +71,12 @@
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class=" px-3 mb-5">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
+                    <fieldset class=" px-3 mb-5">
                         <legend class="fieldset-label small text-dark px-2 w-auto">Delivery</legend>
                         {{ order_form.phone_number | as_crispy_field }}
                         {{ order_form.country | as_crispy_field }}
@@ -108,20 +108,20 @@
                         <input type="hidden" value="{{ client_secret }}" name="client_secret">
                     </fieldset>
 
-                    <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_basket' %}" class="btn btn-light rounded-0">
+                    <div class="submit-button text-right mt-5 mb-2 ms-3">                    
+						<a href="{% url 'view_basket' %}" class="btn btn-dark ">
 							<span class="icon">
 								<i class="bi bi-chevron-left"></i>
 							</span>
 							<span class="font-weight-bold">Adjust Basket</span>
 						</a>
-						<button id="submit-button" class="btn btn-dark rounded-0">
+						<button id="submit-button" class="btn btn-dark ">
 							<span class="font-weight-bold">Complete Order</span>
 							<span class="icon">
 								<i class="bi bi-lock"></i>
 							</span>
 						</button>
-						<p class="small text-danger my-0">
+						<p class="small text-danger my-3">
 							<span class="icon">
 								<i class="bi bi-exclamation-circle"></i>
 							</span>

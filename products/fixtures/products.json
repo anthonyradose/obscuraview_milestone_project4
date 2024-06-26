@@ -49,7 +49,7 @@
         "fields": {
             "sku": "pp100004",
             "name": "Tiger",
-            "description": "Stunning capture of a tiger emerging from dense jungle.",
+            "description": "Striking photo of a tiger immersed in water, capturing its powerful elegance and the serene environment.",
             "photographer": "Sylvia Preece",
             "price": 49.99,
             "category": 1,
@@ -78,13 +78,13 @@
         "model": "products.product",
         "fields": {
             "sku": "pp100006",
-            "name": "Cyberpunk",
-            "description": "Urban night-scape bathed in neon lights.",
+            "name": "Stop-off",
+            "description": "Dazzling image of a subway station at night, with vivid lighting and busy commuters",
             "photographer": "Danny Chandler",
             "price": 49.99,
             "category": 5,
             "image_url": "",
-            "image": "cyberpunk.png"
+            "image": "stop-off.png"
         }
     },
 
@@ -114,7 +114,7 @@
             "price": 49.99,
             "category": 7,
             "image_url": "",
-            "image": "light.png"
+            "image": "light.jpg"
         }
     },
 
@@ -168,13 +168,13 @@
         "model": "products.product",
         "fields": {
             "sku": "pp1000012",
-            "name": "Portrait",
-            "description": "Heartfelt image of an elderly man with a cigar, evoking nostalgia.",
+            "name": "Sunrise Stroll",
+            "description": "Stunning capture of a peaceful morning stroll along a foggy path, with the sun rising in the background..",
             "photographer": "Aimee Mansfield",
-            "price": 49.99,
+            "price": 79.99,
             "category": 4,
             "image_url": "",
-            "image": "portrait.png"
+            "image": "sunrise-stroll.png"
         }
     },
 

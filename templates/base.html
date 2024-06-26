@@ -45,17 +45,17 @@
     <header class="container-fluid fixed-top">
 
       <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex justify-content-lg-between">
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-            <a href="{% url 'home' %}" class="nav-link main-logo-link">
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left d-flex justify-content-center">
+            <a href="{% url 'home' %}" class="nav-link main-logo-link w-25">
               <i class= "home-logo bi bi-house-fill"></i>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
             <form method="GET" action="{% url 'products' %}">
                 <div class="input-group w-100">
-                    <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
+                    <input class="form-control border border-black " type="text" name="q" placeholder="Search products">
                     <div class="input-group-append">
-                        <button class="form-control btn btn-dark border border-black rounded-0" type="submit">
+                        <button class="form-control btn btn-dark border border-black " type="submit">
                             <span class="icon">
                                 <i class="bi bi-search"></i>
                             </span>
@@ -105,7 +105,7 @@
     </div>
     <div class="row bg-white">
         <nav class="navbar navbar-expand-lg navbar-light w-100">
-            <button class="navbar-toggler rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             {% include 'includes/mobile-top-header.html' %}
@@ -113,7 +113,7 @@
         </nav>
     </div>
     <div id="delivery-banner" class="row text-center">
-        <div class="col bg-black text-white">
+        <div class="col bg-info text-dark">
             <h4 class="my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
         </div>            
     </div>    
