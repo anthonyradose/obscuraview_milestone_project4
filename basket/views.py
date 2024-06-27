@@ -5,7 +5,6 @@ from products.models import Product
 
 def view_basket(request):
     """ A view that renders the basket contents page """
-    
     return render(request, 'basket/basket.html')
 
 
@@ -48,7 +47,6 @@ def adjust_basket(request, item_id):
     if 'product_size' in request.POST:
         size = request.POST['product_size']
     basket = request.session.get('basket', {})
-    
     if size:
         if quantity > 0:
             basket[item_id]['items_by_size'][size] = quantity
