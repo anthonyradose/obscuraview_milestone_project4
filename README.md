@@ -1,6 +1,6 @@
 # Obscura View
 
-![Obscura View]()
+![Obscura View](https://live.staticflickr.com/65535/53818988628_4ac97c7de4_z.jpg)
 
 Welcome to Obscura View!
 
