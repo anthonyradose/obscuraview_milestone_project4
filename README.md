@@ -21,7 +21,7 @@ DISCLAIMER: This site is a project designed to mimic an e-commerce site. All pho
 - Purpose of Project
 - User Stories
 - Web Design
-- Wire frames
+- Wireframes
 
 ### Purpose of Project -
 
@@ -217,7 +217,106 @@ Users can add desired prints to their shopping basket and proceed to a secure ch
 
 ---
 
-## Database ERD:
+## Data Schema
+
+#### Overview
+The data schema is designed to manage users, products, orders, reviews, and wishlists effectively. This section provides a detailed description of each model, including their fields and relationships.
+
+### Models and Fields
+
+#### UserProfile
+The `UserProfile` model extends the default Django user model to include additional information.
+
+- **user (PK)**: The unique username for the user.
+- **default_phone_number**: The phone number of the user.
+- **default_country**: The country of the user.
+- **default_postcode**: The postcode of the user.
+- **default_town_or_city**: The town or city of address.
+- **default_street_address_1**: The street of the user's address.
+- **default_street_address_2**: The street of the user's address.
+- **default_county**: The county of the user's address.
+
+#### Category
+The `Category` model is used to categorize products.
+
+- **category_id (PK)**: The unique identifier for the category.
+- **name**: The name of the category.
+- **friendly_name**: A user-friendly name for the category.
+
+### Product
+The `Product` model represents the items available for purchase.
+
+- **category (FK to Category)**: The category to which the product belongs.
+- **sku**: The stock keeping unit identifier for the product.
+- **name**: The name of the product.
+- **description**: A detailed description of the product.
+- **price**: The price of the product.
+- **rating**: The rating given to the product.
+- **photographer**: The name of the photographer who took the photo.
+- **image_url**: The URL for the image of the product.
+- **image**: An image of the product.
+- **has_sizes**: A boolean indicating if the product has different sizes.
+
+### Order
+The `Order` model represents a customer's order.
+
+- **order_number**: The unique identifier for the order.
+- **user_profile (FK to UserProfile)**: The user who placed the order.
+- **full_name**: The full name of the customer.
+- **email**: The email address of the customer.
+- **phone_number**: The phone number of the customer.
+- **country**: The country of the customer's address.
+- **postcode**: The postal code of the customer's address.
+- **town_or_city**: The town or city of the customer's address.
+- **street_address1**: The primary street address of the customer.
+- **street_address2**: The secondary street address of the customer (optional).
+- **county**: The county of the customer's address (optional).
+- **date**: The date the order was placed.
+- **delivery_cost**: The delivery fee for the order.
+- **order_total**: The subtotal amount of the order.
+- **grand_total**: The total amount for the order.
+- **original_basket**: The original shopping basket data.
+- **stripe_pid**: The payment identifier from Stripe.
+
+
+### OrderLineItem
+The `OrderLineItem` model represents the individual items within an order.
+
+- **order (FK to Order)**: The order to which this item belongs.
+- **product (FK to Product)**: The product being ordered.
+- **product_size**: The size of the product (optional).
+- **quantity**: The quantity of the product ordered.
+- **lineitem_total**: The subtotal for this line item.
+
+
+### Review
+The `Review` model allows users to review products.
+
+- **product (FK to Product)**: The product being reviewed.
+- **user (FK to User)**: The user who submitted the review.
+- **title**: The title of the review.
+- **body**: The content of the review.
+- **rating**: The rating given to the product, from 1 to 5.
+- **created_at**: The date and time when the review was created.
+
+
+### Wishlist
+The `Wishlist` model keeps track of products users have added to their wishlist.
+
+- **user (FK to User)**: The user who owns the wishlist.
+- **product (FK to Product)**: The product added to the wishlist.
+- **added_at**: The date and time when the product was added to the wishlist.
+
+
+### Relationships
+- **UserProfile to Order**: One-to-Many (One user can place multiple orders)
+- **UserProfile to Review**: One-to-Many (One user can write multiple reviews)
+- **UserProfile to Wishlist**: One-to-Many (One user can have multiple wishlist items)
+- **Category to Product**: One-to-Many (One category can include multiple products)
+- **Product to OrderLineItem**: One-to-Many (One product can be part of multiple order line items)
+- **Order to OrderLineItem**: One-to-Many (One order can contain multiple order line items)
+- **Product to Review**: One-to-Many (One product can have multiple reviews)
+- **Product to Wishlist**: One-to-Many (One product can be in multiple wishlists)
 
 ---
 
@@ -227,7 +326,7 @@ Users can add desired prints to their shopping basket and proceed to a secure ch
 
 The only errors found in the templates were from the HTML Validator not being able to recognize Templating:
 
-![HTMLValidation](https://live.staticflickr.com/65535/53818956654_3436dde8f4_z.jpghttps://live.staticflickr.com/65535/53818956654_3436dde8f4_z.jpg)
+![HTMLValidation](https://live.staticflickr.com/65535/53818956654_3436dde8f4_z.jpg)
 
 ### CSS Validation
 
@@ -332,10 +431,8 @@ Some very minor warnings for lines being too long appeared on a few of the views
 | UT03         | Product Pages          | Test product page readability                            | Pass      |
 | UT04         | Error Handling         | Test error message clarity                               | Pass      |
 | UT05         | Mobile Navigation      | Test site navigation on mobile                           | Pass      |
-| UT06         | Accessibility          | Test site accessibility features                         |       |
-| UT07         | User Feedback          | Test system feedback on actions                          | Pass      |
-| UT08         | Account Management     | Test ease of managing user account                       |       |
-| UT09         | Consistency            | Test consistency in UI elements and messages             | Pass      |
+| UT06         | User Feedback          | Test system feedback on actions                          | Pass      |
+| UT07         | Consistency            | Test consistency in UI elements and messages             | Pass      |
 
 #### Responsiveness Tests
 
@@ -353,9 +450,9 @@ Some very minor warnings for lines being too long appeared on a few of the views
 | Test Case ID | Feature                | Description                                              | Pass/Fail |
 |--------------|------------------------|----------------------------------------------------------|-----------|
 | DT01         | Data Validation        | Test data validation for user input                      | Pass      |
-| DT02         | Data Persistence       | Test data persistence across sessions                    |       |
-| DT03         | Data Security          | Test security of sensitive data                          |       |
-| DT04        | Data Integrity         | Test data integrity during transactions                  |       |
+| DT02         | Data Persistence       | Test data persistence across sessions                    | pass      |
+| DT03         | Data Security          | Test security of sensitive data                          | pass      |
+| DT04        | Data Integrity         | Test data integrity during transactions                  |  pass     |
 
 
 ---
@@ -404,6 +501,16 @@ Remember to set up any necessary configuration variables (such as environment va
 
 (Replace [repository URL] with the actual URL of your forked repository and [repository name] with the name of the cloned repository on your local machine.)
 
+---
+
+## Future Additions/Improvements
+
+- Even more thorough testing
+- An ERD to illustrate the data schema
+- Add some hover animations to rest of icons/links
+- Add more products and with pagination
+- Add a newsletter model
+  
 ---
 
 ## Credits & Acknowledgements
