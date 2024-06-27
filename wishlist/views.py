@@ -7,6 +7,9 @@ from products.models import Product
 
 @login_required
 def add_to_wishlist(request, product_id):
+    """
+    Handle adding a product to wishlist.
+    """
     product = get_object_or_404(Product, id=product_id)
     existing_wishlist_item = Wishlist.objects.filter(user=request.user, product=product).exists()
     if existing_wishlist_item:
@@ -19,6 +22,9 @@ def add_to_wishlist(request, product_id):
 
 @login_required
 def remove_from_wishlist(request, item_id):
+    """
+    Handle deleting a product from wishlist.
+    """
     wishlist_item = get_object_or_404(Wishlist, id=item_id, user=request.user)
     wishlist_item.delete()
     messages.success(request, f'{str(wishlist_item).split("- ")[1]} removed from your wishlist')

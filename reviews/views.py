@@ -8,6 +8,9 @@ from django.contrib import messages
 
 @login_required
 def add_review(request, product_id):
+    """
+    Handle adding a review.
+    """
     product = get_object_or_404(Product, id=product_id)
     form = ReviewForm(request.POST or None)
     if request.method == 'POST':
@@ -30,6 +33,9 @@ def add_review(request, product_id):
 
 @login_required
 def edit_review(request, review_id):
+    """
+    Handle editing an existing review.
+    """
     review = get_object_or_404(Review, id=review_id)
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
@@ -48,6 +54,9 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
+    """
+    Handle deleting a review.
+    """
     review = get_object_or_404(Review, id=review_id)    
     if request.method == 'POST':
         review.delete()

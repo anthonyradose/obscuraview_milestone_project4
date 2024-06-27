@@ -1,112 +1,277 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Obscura View
 
-Welcome USER_NAME,
+![Obscura View]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Welcome to Obscura View!
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **April 26, 2024**
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum imperdiet fermentum. Aliquam dapibus dapibus nibh non ultrices. Aliquam varius nisi ante, et scelerisque mauris faucibus sit amet. Aenean pulvinar porta ex mollis vestibulum. Aliquam vitae facilisis nibh, in semper elit. Integer dui urna, euismod in mauris vel, pharetra pretium eros. Nam in lorem dignissim, lacinia ex sit amet, porta nulla. Aenean elit leo, vehicula nec dolor eget, hendrerit laoreet odio.
 
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+The live website can be found [here]()
 
 ---
 
-Happy coding!
+## User Experience
+
+- Purpose of Project
+- User Stories
+- Web Design
+- Wire frames
+
+### Purpose of Project -
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum orci ex, venenatis vehicula ante pulvinar quis. Pellentesque at sodales diam. In aliquam, lacus vitae ornare luctus, purus felis eleifend magna, sit amet tristique felis sem sed ex. Ut eget est quis dolor bibendum scelerisque. Quisque fringilla, mi sed volutpat vulputate, tellus mauris cursus enim, dignissim tincidunt nulla sem eu enim. In tincidunt elementum dapibus. Morbi venenatis, purus vel facilisis tincidunt.
+
+Value to Users:
+- 
+- 
+- 
+
+---
+
+### User Stories -
+
+1. 
+
+![]() ![]()
+
+2. 
+
+![]() ![]()
+
+3. 
+
+![]() ![]()
+
+4. 
+
+![]()
+
+5. 
+
+![]() ![]()
+
+6. 
+
+![]()
+
+7. 
+
+![]() ![]()
+
+---
+
+### Web Design -
+
+#### Visual Aesthetic:
+
+
+
+#### Color Scheme:
+
+
+
+#### Typography:
+
+
+
+---
+
+### Wireframes:
+
+The site's wireframes were made with balsamiq wireframes.
+
+| Home Page:                  |     |
+| --------------------------- | --- |
+| ![Home Page](https://live.staticflickr.com/65535/53627339159_fb88714f31_b.jpg) |     |
+
+---
+
+## Website Features
+
+- **:**
+  - 
+  - 
+  
+- **:**
+  - 
+  - 
+  
+- **:**
+  - 
+  - 
+  
+- **:**
+  - 
+  - 
+  
+- **:**
+  - 
+  - 
+  
+- **:**
+  - 
+  
+- **:**
+  - 
+
+---
+
+## Website Walkthrough -
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+ 
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+
+  - 
+
+- **:**
+  - 
+
+---
+
+## Made with:
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML) (used for structuring and presenting content of the website)
+- [CSS](https://en.wikipedia.org/wiki/CSS) (used for the styling of the content)
+- [JS](https://en.wikipedia.org/wiki/JavaScript) (used for)
+- [Google Fonts](https://fonts.google.com) (used for)
+- [Bootstrap](https://getbootstrap.com) (used for the responsiveness and additional styling)
+- []() ()
+- [Chrome](https://www.google.com/intl/en_uk/chrome) (used to debug and test the source code using HTML5 and to test site responsiveness)
+- [GitHub](https://github.com) (used to create the repository and store the projects code after pushed from Git)
+- [Gitpod](https://www.gitpod.io/) (used for editing code of project)
+- [vscode](https://code.visualstudio.com) (used for editing code of project)
+- [W3C Markup](https://validator.w3.org) (used for validating the html5 code)
+- [Jigsaw Validator](https://jigsaw.w3.org/css-validator) (used for validating the CSS code)
+- [Webaim Contrast Checker](https://webaim.org/resources/contrastchecker) (Used for validating color contrast for accessibility)
+- [Jshint](https://jshint.com) (Used for JavaScript validation)
+- [Python](https://www.python.org) (used for app logic)
+- [Heroku](https://www.heroku.com) (used for deployment of app)
+- 
+- [Am I Responsive?](https://ui.dev/amiresponsive) (used for responsiveness testing)
+
+---
+
+## Database ERD:
+
+---
+
+## Testing & Validation
+
+### HTML Validation
+
+The only errors found in the templates were seemingly from the HTML Validator's inability to recognize Jinja Templating:
+
+![HTMLValidation]() ![]() ![]()
+
+### CSS Validation
+
+No errors were found.
+
+![CSSValidation]()
+
+### JS Validation
+
+No errors were found.
+
+![JSValidation]()
+
+### Python Validation
+
+No errors were found.
+
+![PythonValidation]()
+
+### Manual Testing: ###
+
+
+
+
+
+
+
+
+---
+
+## Deployment
+
+**With Heroku:**
+
+1. Sign in to your Heroku account or sign up for a new one.
+   
+2.	Connect your Heroku account to your GitHub account:
+    * Navigate to the Heroku Dashboard.
+    * Click on the "New" button and select "Create new app."
+    * Give your app a unique name and choose the region closest to you.
+    * Click "Create app."
+    * In the "Deployment method" section, select "GitHub."
+      
+3. Search for the repository you want to deploy from your GitHub account.
+   
+4.	Once you've connected your GitHub repository, you can choose to either deploy the app automatically when changes are pushed to GitHub or manually deploy.
+   
+5. If you choose automatic deploys, select the branch you want to deploy from and enable automatic deploys.
+   
+6.	If you prefer manual deploys, you can trigger a deployment manually by clicking the "Deploy Branch" button.
+   
+7. Heroku will build your app using your project's build scripts and dependencies specified in your repository.
+   
+8. Once the build is complete, you can view your deployed application by clicking the "View" button on the Heroku Dashboard.
+   
+9.	You can manage your deployed application settings and view logs from the Heroku Dashboard.
+Remember to set up any necessary configuration variables (such as environment variables) on the settings page.
+
+**Fork and Clone Repository:**
+
+1. Visit the GitHub repository and click on the "Fork" button in the top-right corner. This will create a copy of the repository under your GitHub account.
+
+2. On your forked repository's page, click on the "Code" button and copy the repository's URL.
+
+3. Open your preferred Command Line Interface (e.g., Terminal, Git Bash) and navigate to the directory where you want to clone the repository.
+
+4. Enter the following command in the command line:
+   `git clone [repository URL]`
+
+5. Navigate into the Repository: Use the cd command to navigate into the cloned repository:
+   `cd [repository name]`
+
+(Replace [repository URL] with the actual URL of your forked repository and [repository name] with the name of the cloned repository on your local machine.)
+
+---
+
+## Credits & Acknowledgements
+
+- []() (For )
+- [](https://www.freepik.com) (For )
+- [](https://rawg.io/apidocs) (For )
+- My mentor Marcel for his support, encouragement, advice and guidance throughout the development of this app.

@@ -40,7 +40,7 @@
                     {% for item in basket_items %}
                         <div class="row">
                             <div class="col-12 col-sm-6 mb-2">
-                                <img class="img-fluid" src="{{ item.product.image.url }}">
+                                <img alt="{{item.product.image.url}}" class="img-fluid" src="{{ item.product.image.url }}">
                             </div>
                             <div class="col-12 col-sm-6 mb-2">
                                 {% include "basket/product_info.html" %}

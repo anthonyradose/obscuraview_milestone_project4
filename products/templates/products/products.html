@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-    <div class="btt-button shadow-sm  border border-black">
+    <div class="btt-button shadow-sm  border border-black hidden">
         <a class="btt-link d-flex h-100 bg-light">
             <i class="bi bi-arrow-up text-dark mx-auto my-auto"></i>
         </a>	
@@ -142,6 +142,13 @@
 {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript">
+        document.addEventListener('scroll', function() {
+    const bttButton = document.querySelector('.btt-button');
+    if (window.scrollY > 10) { 
+        bttButton.classList.remove('hidden');
+    }
+});
+
 		document.querySelectorAll('.btt-link').forEach(function(link) {
     link.addEventListener('click', function(e) {
         window.scrollTo(0, 0);

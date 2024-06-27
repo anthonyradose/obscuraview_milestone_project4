@@ -17,6 +17,11 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
+    """
+
+    Handle caching of checkout data using Stripe's PaymentIntent API.
+
+    """
     try:
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -34,6 +39,11 @@ def cache_checkout_data(request):
 
 @login_required
 def checkout(request):
+    """
+
+    Handle the checkout process including form submission and Stripe payment initiation.
+
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
