@@ -91,27 +91,27 @@ Value to Users:
 
 ### Wireframes:
 
-The site's wireframes were made with .
+The site's wireframes were made with Balsamiq.
 
 | Home Page:                  |     |
 | --------------------------- | --- |
-| ![Home Page]() |     |
-
-| ![Products Page]() |     |
-
-| ![Product Page]() |     |
-
-| ![Review Form]() |     |
-
-| ![Product Management Page]() |     |
-
-| ![Profile Page]() |     |
-
-| ![Checkout Page]() |     |
-
-| ![Checkout Success Page]() |     |
-
-| ![Register/Sign In Page]() |     |
+| ![Home Page](https://live.staticflickr.com/65535/53817987102_4ba23eda5a_z.jpg) |     |
+| Products Page:                  |     |
+| ![Products Page](https://live.staticflickr.com/65535/53819244709_96cf4a6aff_z.jpg) |     |
+| Product Page:                  |     |
+| ![Product Page](https://live.staticflickr.com/65535/53819247609_7ceac8aa38_z.jpg) |     |
+| Review Form:                  |     |
+| ![Review Form](https://live.staticflickr.com/65535/53819349265_a7fb7eee4f_z.jpg) |     |
+| Product Management Page:                  |     |
+| ![Product Management Page](https://live.staticflickr.com/65535/53819349255_d23b7d8040_z.jpg) |     |
+| Profile Page:                  |     |
+| ![Profile Page](https://live.staticflickr.com/65535/53819151828_f063df343b_z.jpg) |     |
+| Checkout Page:                  |     |
+| ![Checkout Page](https://live.staticflickr.com/65535/53819244719_7de71f0761_z.jpg) |     |
+| Checkout Success Page:                  |     |
+| ![Checkout Success Page](https://live.staticflickr.com/65535/53818907401_e4486a121c_z.jpg) |     |
+| Sign Up Page:                  |     |
+| ![Sign Up Page](https://live.staticflickr.com/65535/53819349295_c971c60fd4_z.jpg) |     |
 
 
 ---
@@ -500,6 +500,68 @@ Remember to set up any necessary configuration variables (such as environment va
    `cd [repository name]`
 
 (Replace [repository URL] with the actual URL of your forked repository and [repository name] with the name of the cloned repository on your local machine.)
+
+
+**PostgreSQL from Code Institute:**
+This project used the Ci PostgresSQL database supplied by Code Institute.
+
+To make work, the DATABASE_URL obtained from Ci Postgres was set in the heroku's config vars.
+
+ ***Setup Ci Database on Heroku***:
+   - Log in to your Heroku account.
+   - Go to the Dashboard and select your application.
+   - Navigate to the "Settings" tab.
+   - Click on "Reveal Config Vars".
+   - Set the `DATABASE_URL` obtained from Code Institute in Heroku's config vars.
+
+**Sign Up for AWS S3 to Host Static Files:**
+
+1. ***Create an AWS Account***:
+   - Go to the [AWS Management Console](https://aws.amazon.com/).
+   - Click on the "Create an AWS Account" button.
+   - Follow the instructions to create a new account. You'll need to provide your contact information, payment details, and choose an account plan.
+
+2. ***Sign In to AWS Management Console***:
+   - After creating your account, sign in to the AWS Management Console using your credentials.
+
+3. ***Create an S3 Bucket***:
+   - In the AWS Management Console, search for "S3" in the services search bar and select it.
+   - Click on the "Create bucket" button.
+   - Enter a unique bucket name and choose a region close to you.
+   - Configure any additional settings as needed and click "Create bucket".
+
+4. ***Configure Bucket Permissions***:
+   - Select your newly created bucket from the list.
+   - Go to the "Permissions" tab.
+   - Under "Block public access (bucket settings)", click on "Edit".
+   - Uncheck "Block all public access", acknowledge the warning, and click "Save changes".
+   - Under "Bucket Policy", click on "Edit".
+   - Add a bucket policy to allow public read access:
+   ```
+     {
+       "Version": "2012-10-17",
+       "Statement": [
+         {
+           "Sid": "PublicReadGetObject",
+           "Effect": "Allow",
+           "Principal": "*",
+           "Action": "s3:GetObject",
+           "Resource": "arn:aws:s3:::your-bucket-name/*"
+         }
+       ]
+     }
+     ```
+   - Replace `your-bucket-name` with the name of your S3 bucket.
+   - Save the policy.
+
+5. ***Upload Files to S3***:
+   - Go to the "Overview" tab of your bucket.
+   - Click on the "Upload" button.
+   - Add your CSS and media files or drag and drop them.
+   - Click "Upload" to upload the files to your S3 bucket.
+
+6. ***Access Your Static Files***:
+   - Once your files are uploaded, they can be accessed via the S3 bucket.
 
 ---
 
