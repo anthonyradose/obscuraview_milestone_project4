@@ -14,6 +14,22 @@ body {
 }
 
 /* Icon Styles: */
+.nav-link:hover,
+.nav-link:hover i,
+.home-logo:hover {
+  color: #424649; 
+}
+.nav-link:active,
+.nav-link:active i,
+.home-logo:active {
+  color:  #4d5154
+}
+
+.nav-link,
+.home-logo {
+  transition: color 0.3s ease-in-out;
+}
+
 .icon {
   align-items: center;
   display: inline-flex;
@@ -189,12 +205,14 @@ input[name="q"]::placeholder {
 
 /* -------------------------------- Media Queries: */
 @media (min-width: 320px) {
-  .landscape, .portrait {
+  .landscape,
+  .portrait {
     height: 150px;
   }
 }
 @media (min-width: 375px) {
-  .landscape, .portrait {
+  .landscape,
+  .portrait {
     height: 175px;
   }
 }
@@ -217,12 +235,14 @@ input[name="q"]::placeholder {
   }
 }
 @media (min-width: 768px) {
-  .landscape, .portrait {
+  .landscape,
+  .portrait {
     height: 225px;
   }
 }
 @media (min-width: 992px) {
-  .landscape, .portrait {
+  .landscape,
+  .portrait {
     height: 175px;
   }
   .fixed-top-desktop-only {
