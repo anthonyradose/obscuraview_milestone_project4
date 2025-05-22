@@ -1,6 +1,6 @@
     <div class="container py-4">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-{% if recently_viewed_products %}3{% else %}4{% endif %}">
                 <h3 class="logo-font">Obscura view</h3>
                 <ul class="list-unstyled">
                     <li><a href="https://github.com/anthonyradose" target="_blank" class="text-light text-decoration-none "><i class="bi bi-github"></i> Github</a></li>
@@ -8,12 +8,24 @@
                     <li><a href="https://www.instagram.com/asradose" target="_blank" class="text-light text-decoration-none "><i class="bi bi-instagram"></i> Instagram</a></li>
                 </ul>
             </div>
-            <div class="col-md-2">
-        
+            {% if recently_viewed_products %}
+            <div class="col-md-3">
+                <h5>Recently Viewed</h5>
                 <ul class="list-unstyled">
+                    {% for product in recently_viewed_products %}
+                        <li class="mb-2">
+                            <a href="{% url 'product_detail' product.id %}" class="text-light text-decoration-none">
+                                {% if product.image_url %}
+                                    <img src="{{ product.image_url }}" alt="{{ product.name }}" class="me-2" style="width: 30px; height: 30px; object-fit: cover;">
+                                {% endif %}
+                                {{ product.name|truncatechars:20 }}
+                            </a>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
-            <div class="col-md-6">
+            {% endif %}
+            <div class="col-md-{% if recently_viewed_products %}6{% else %}8{% endif %}">
                 <h5>About</h5>
                 <p>A fictional e-commerce site imagined as a photo gallery store.</p>
                 <p>DISCLAIMER: This site is a project designed to mimic an e-commerce site. All photographers and products are fictional. The pictures obtained are royalty-free and are credited to the actual photographers in the github repository. Users can simulate payment using stripe's test payment system, no actual charges will occur.</p>

@@ -44,11 +44,16 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
     current_sorting = f'{sort}_{direction}'
+
+    # Get recently viewed products from session
+    recently_viewed_products = request.session.get('recently_viewed', [])
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'recently_viewed_products': recently_viewed_products,
     }
 
     return render(request, 'products/products.html', context)
@@ -66,14 +71,43 @@ def product_detail(request, product_id):
     existing_reviews = reviews.exists()
     form = ReviewForm()
     average_rating = product.average_rating()
+
+    # Handle recently viewed products
+    recently_viewed = request.session.get('recently_viewed', [])
+    print("Before update - Session data:", recently_viewed)  # Debug print
+    
+    # Create product dict for session
+    product_dict = {
+        'id': str(product.id),
+        'name': str(product.name),
+        'image_url': str(product.image.url) if product.image else ''
+    }
+    print("Current product dict:", product_dict)  # Debug print
+    
+    # Remove if already in list
+    recently_viewed = [p for p in recently_viewed if p['id'] != str(product.id)]
+    
+    # Add to front of list
+    recently_viewed.insert(0, product_dict)
+    
+    # Keep only last 5 viewed products
+    recently_viewed = recently_viewed[:5]
+    
+    # Update session
+    request.session['recently_viewed'] = recently_viewed
+    request.session.modified = True
+    print("After update - Session data:", recently_viewed)  # Debug print
+
     context = {
         'product': product,
         'reviews': reviews,
         'existing_review': existing_review,
         'existing_reviews': existing_reviews,
         'form': form,
-        'average_rating': average_rating
+        'average_rating': average_rating,
+        'recently_viewed_products': recently_viewed
     }
+    print("Context recently_viewed_products:", context['recently_viewed_products'])  # Debug print
 
     return render(request, 'products/product_detail.html', context)
 
