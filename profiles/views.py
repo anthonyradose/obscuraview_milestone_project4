@@ -13,8 +13,8 @@ from checkout.models import Order
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
-    wishlist_items = Wishlist.objects.filter(user=request.user)
-    user_reviews = Review.objects.filter(user=request.user)
+    wishlist_items = Wishlist.objects.select_related('product').filter(user=request.user)
+    user_reviews = Review.objects.select_related('product', 'user').filter(user=request.user)
     review_forms = [ReviewForm(instance=review) for review in user_reviews]
 
     if request.method == 'POST':
@@ -27,7 +27,7 @@ def profile(request):
     else:
         form = UserProfileForm(instance=profile)
 
-    orders = profile.orders.all()
+    orders = profile.orders.prefetch_related('lineitems__product').all()
     template = 'profiles/profile.html'
     context = {
         'form': form,
@@ -42,7 +42,7 @@ def profile(request):
 
 
 def order_history(request, order_number):
-    order = get_object_or_404(Order, order_number=order_number)
+    order = get_object_or_404(Order.objects.prefetch_related('lineitems__product'), order_number=order_number)
     messages.info(request, (
         f'This is a past confirmation for order number {order_number}. '
         'A confirmation email was sent on the order date.'

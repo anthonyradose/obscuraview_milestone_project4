@@ -11,7 +11,7 @@ def add_review(request, product_id):
     """
     Handle adding a review.
     """
-    product = get_object_or_404(Product, id=product_id)
+    product = get_object_or_404(Product.objects.select_related('category'), id=product_id)
     form = ReviewForm(request.POST or None)
     if request.method == 'POST':
         existing_review = Review.objects.filter(user=request.user, product=product).exists()
@@ -57,7 +57,7 @@ def delete_review(request, review_id):
     """
     Handle deleting a review.
     """
-    review = get_object_or_404(Review, id=review_id)    
+    review = get_object_or_404(Review.objects.select_related('product', 'user'), id=review_id)    
     if request.method == 'POST':
         review.delete()
         messages.success(request, f'{review} removed from your reviews')

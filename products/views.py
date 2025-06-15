@@ -12,7 +12,7 @@ from django.db.models.functions import Lower
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    products = Product.objects.select_related('category').all()
     query = None
     categories = None
     sort = None
@@ -62,8 +62,8 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
 
-    product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.filter(product=product)
+    product = get_object_or_404(Product.objects.select_related('category').prefetch_related('reviews'), pk=product_id)
+    reviews = product.reviews.all()
     if request.user.is_authenticated:
         existing_review = reviews.filter(user=request.user).exists()
     else:
